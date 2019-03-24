@@ -1,3 +1,5 @@
-<p>
-  memberlist works!
-</p>
+<div>
+  <div *ngFor="let member of _members" class="member-container">
+    <p>{{member.displayname}}</p>
+  </div>
+</div>
