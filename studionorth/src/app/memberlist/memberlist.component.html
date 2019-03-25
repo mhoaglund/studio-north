@@ -1,5 +1,14 @@
-<div>
-  <div *ngFor="let member of _members" class="member-container">
-    <p>{{member.displayname}}</p>
+<h4>
+  Current Membership
+</h4>
+<div class="members">
+  <div *ngFor="let member of _members" class="seg-member-container">
+    <section id="{{member.id}}" [style.background-image]="getPortrait(member.portrait)">
+        <p>{{member.displayname}}</p>
+    </section>
+    <section>
+        <p class="basic member-desc">{{ (member.shortdesc.length>80)? (member.shortdesc | slice:0:80)+'..':(member.shortdesc) }}</p>
+        <p class="detail">{{ (member.shortbio.length>180)? (member.shortbio | slice:0:180)+'..':(member.shortbio) }}</p>
+    </section>
   </div>
 </div>

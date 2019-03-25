@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DomSanitizer, SafeResourceUrl, SafeUrl } from '@angular/platform-browser';
 import { MembersService } from '../members.service';
 
 @Component({
@@ -9,7 +10,10 @@ import { MembersService } from '../members.service';
 export class MemberlistComponent implements OnInit {
   _members: []
   private _membersService
-  constructor(private members: MembersService) { 
+  constructor(
+    private members: MembersService,
+    private _sanitizer: DomSanitizer,
+    ) { 
     this._membersService = members;
   }
 
@@ -20,4 +24,7 @@ export class MemberlistComponent implements OnInit {
     })
   }
 
+  getPortrait(p) {
+    return this._sanitizer.bypassSecurityTrustStyle(`url(assets/images/${p})`);
+  }
 }

@@ -10,6 +10,7 @@ import { AlumnilistComponent } from './alumnilist/alumnilist.component';
 import { AvailabilityComponent } from './availability/availability.component';
 import { MenuComponent } from './menu/menu.component';
 import { HomeComponent } from './home/home.component';
+import { LandingComponent } from './landing/landing.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HomeComponent } from './home/home.component';
     AlumnilistComponent,
     AvailabilityComponent,
     MenuComponent,
-    HomeComponent
+    HomeComponent,
+    LandingComponent
   ],
   imports: [
     HttpModule,
