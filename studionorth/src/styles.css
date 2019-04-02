@@ -1,4 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+<<<<<<< HEAD
 p, span, h4, h5{
     color: #5050c5;
     font-family: 'Crimson Text', serif;
@@ -8,3 +9,74 @@ h1, h2, h3{
     font-family: 'Signika', serif;
     font-weight: 500;
 }
+=======
+.detail{
+    display: none;
+}
+
+.member-desc{
+    text-align: center;
+}
+
+/* Segmented Member Control */
+.seg-member-container{
+    display: grid;
+    grid-template-columns: 35% 1fr;
+    margin-bottom: 1rem;
+    min-height: 18vh;
+}
+.seg-member-container:nth-child(even){
+    grid-template-columns: 1fr 35%;
+}
+.seg-member-container:nth-child(even) > section:nth-child(1){
+    order: 2;
+}
+.seg-member-container > section{
+    /* padding: 2rem; */
+}
+.seg-member-container > section:nth-child(1){
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-end;
+}
+.seg-member-container > section:nth-child(1) p{
+    text-align: center;
+}
+.seg-member-container > section:nth-child(2){
+    padding: 1rem;
+    background-color: pink;
+}
+
+.seg-member-container.alumni > section:nth-child(2){
+    padding: 1rem;
+    background-color: #91f2cd;
+}
+
+@media (orientation: landscape) {
+    .members {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .seg-member-container{
+        display: grid;
+        height: calc(100vh - 3rem);
+        grid-template-rows: 1fr 35%;
+        grid-template-columns: 1fr;
+        margin-bottom: 1rem;
+        min-height: 18vh;
+    }
+    .seg-member-container:nth-child(even){
+        grid-template-rows: 1fr 35%;
+        grid-template-columns: 1fr;
+    }
+    .seg-member-container:nth-child(even) > section:nth-child(1){
+        order: 1;
+    }
+    .seg-member-container:nth-child(even) > section:nth-child(2){
+        order: 2;
+    }
+  }
+>>>>>>> bab2bc88ad50968b929bbbc9b557c6af66908b54
