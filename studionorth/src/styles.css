@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+p, span, h4, h5{
+    color: #5050c5;
+    font-family: 'Crimson Text', serif;
+}
+h1, h2, h3{
+    color: #222;
+    font-family: 'Signika', serif;
+    font-weight: 500;
+}

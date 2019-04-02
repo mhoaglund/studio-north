@@ -7,6 +7,7 @@ import { MemberlistComponent } from './memberlist/memberlist.component';
 import { AlumnilistComponent } from './alumnilist/alumnilist.component';
 import { AvailabilityComponent } from './availability/availability.component';
 import { MenuComponent } from './menu/menu.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { MenuComponent } from './menu/menu.component';
     MemberlistComponent,
     AlumnilistComponent,
     AvailabilityComponent,
-    MenuComponent
+    MenuComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
