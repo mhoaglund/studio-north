@@ -1,5 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-<<<<<<< HEAD
 p, span, h4, h5{
     color: #5050c5;
     font-family: 'Crimson Text', serif;
@@ -9,7 +8,6 @@ h1, h2, h3{
     font-family: 'Signika', serif;
     font-weight: 500;
 }
-=======
 .detail{
     display: none;
 }
@@ -79,4 +77,3 @@ h1, h2, h3{
         order: 2;
     }
   }
->>>>>>> bab2bc88ad50968b929bbbc9b557c6af66908b54
