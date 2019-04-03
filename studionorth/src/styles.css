@@ -7,13 +7,15 @@ html, body{
 
 p, span, h5{
     color: #5050c5;
-    font-family: 'Signika', serif;
+    font-family: 'Heebo', serif;
     line-height: 1.4;
 }
 h1, h2, h3, h4{
     color: #222;
     font-family: 'Crimson Text', serif;
     font-weight: 100;
+    letter-spacing: 0.5px;
+    font-size: 1.5rem;
 }
 
 section h4:first-child{
@@ -104,6 +106,21 @@ app-alumnilist > section{
     /* background-color: #91f2cd; */
 }
 
+.seg-member-container .portrait-frame{
+    display: flex;
+    flex-flow: column;
+    padding: 2rem;
+}
+    .portrait-frame > section{
+        flex-grow: 1;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
 @media (orientation: landscape) {
     .members {
       display: grid;
@@ -117,14 +134,24 @@ app-alumnilist > section{
         margin-bottom: 1rem;
         min-height: 18vh;
     }
-    .seg-member-container:nth-child(even){
+    .seg-member-container.member:nth-child(even){
         grid-template-rows: 1fr 35%;
         grid-template-columns: 1fr;
     }
-    .seg-member-container:nth-child(even) > section:nth-child(1){
+    .seg-member-container.member:nth-child(even) > section:nth-child(1){
         order: 1;
     }
-    .seg-member-container:nth-child(even) > section:nth-child(2){
+    .seg-member-container.member:nth-child(even) > section:nth-child(2){
+        order: 2;
+    }
+    .seg-member-container.alumni:nth-child(odd){
+        grid-template-rows: 1fr 35%;
+        grid-template-columns: 1fr;
+    }
+    .seg-member-container.alumni:nth-child(odd) > section:nth-child(1){
+        order: 1;
+    }
+    .seg-member-container.alumni:nth-child(odd) > section:nth-child(2){
         order: 2;
     }
   }
@@ -135,9 +162,13 @@ app-alumnilist > section{
 
 @media (min-width: 1240px) {
     .members{
-        max-width: 60vw;
+        max-width: 70vw;
         margin-left: auto;
         margin-right: auto;
+        grid-column-gap: 2rem;
+    }
+    .seg-member-container{
+        height: calc(70vh - 3rem);
     }
   }
   

@@ -5,11 +5,14 @@
   <hr>
   <div class="members">
     <div *ngFor="let member of _alum" class="seg-member-container alumni">
-      <section id="{{member.id}}" [style.background-image]="getPortrait(member.portrait)">
-          <p>{{member.displayname}}</p>
-      </section>
+        <section id="{{member.id}}" class="portrait-frame">
+            <section  [style.background-image]="getPortrait(member.portrait)">
+                <p>{{member.displayname}}</p>
+            </section>
+        </section>
       <section>
           <p class="basic member-desc">{{ (member.shortdesc.length>80)? (member.shortdesc | slice:0:80)+'..':(member.shortdesc) }}</p>
+          <hr>
           <p class="detail">{{ (member.shortbio.length>180)? (member.shortbio | slice:0:180)+'..':(member.shortbio) }}</p>
       </section>
     </div>
