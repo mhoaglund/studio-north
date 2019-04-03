@@ -1,9 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
-p, span, h4, h5{
-    color: #5050c5;
-    font-family: 'Crimson Text', serif;
+html, body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-h1, h2, h3{
+
+p, span, h5{
+    color: #5050c5;
+    font-family: 'Signika', serif;
+    line-height: 1.4;
+}
+h1, h2, h3, h4{
     color: #222;
     font-family: 'Crimson Text', serif;
     font-weight: 100;
@@ -12,6 +19,7 @@ h1, h2, h3{
 section h4:first-child{
     margin: 0;
     margin-bottom: 1rem;
+    text-align: center;
 }
 
 section.slice{
@@ -21,9 +29,17 @@ section.slice{
 section.minslice{
     min-height: 100vh;
     width: 100%;
+    padding-top: 1rem;
 }
 .member-desc{
     text-align: center;
+}
+.members{
+    padding: 2rem;
+}
+hr{
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 
 app-memberlist > section{

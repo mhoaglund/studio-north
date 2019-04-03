@@ -2,6 +2,7 @@
   <h4>
     Current Membership
   </h4>
+  <hr>
   <div class="members">
     <div *ngFor="let member of _members" class="seg-member-container member">
       <section id="{{member.id}}" [style.background-image]="getPortrait(member.portrait)">
