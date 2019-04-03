@@ -5,34 +5,65 @@ p, span, h4, h5{
 }
 h1, h2, h3{
     color: #222;
-    font-family: 'Signika', serif;
-    font-weight: 500;
+    font-family: 'Crimson Text', serif;
+    font-weight: 100;
 }
+
+section h4:first-child{
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
 section.slice{
     height: 100vh;
     width: 100%;
 }
-.detail{
-    display: none;
+section.minslice{
+    min-height: 100vh;
+    width: 100%;
 }
-
 .member-desc{
     text-align: center;
 }
 
+app-memberlist > section{
+    background-color: #fafafa;
+}
+app-alumnilist > section{
+    background-color: #ececec;
+}
+
+.heroplate{
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+    .heroplate .herocontent{
+        font-weight: 100;
+        color: white;
+    }
 /* Segmented Member Control */
 .seg-member-container{
     display: grid;
     grid-template-columns: 35% 1fr;
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
     min-height: 18vh;
 }
-.seg-member-container:nth-child(even){
-    grid-template-columns: 1fr 35%;
-}
-.seg-member-container:nth-child(even) > section:nth-child(1){
-    order: 2;
-}
+    .seg-member-container.member:nth-child(even){
+        grid-template-columns: 1fr 35%;
+    }
+    .seg-member-container.member:nth-child(even) > section:nth-child(1){
+        order: 2;
+    }
+    .seg-member-container.alumni:nth-child(odd){
+        grid-template-columns: 1fr 35%;
+    }
+    .seg-member-container.alumni:nth-child(odd) > section:nth-child(1){
+        order: 2;
+    }
 .seg-member-container > section{
     /* padding: 2rem; */
 }
@@ -49,12 +80,12 @@ section.slice{
 }
 .seg-member-container > section:nth-child(2){
     padding: 1rem;
-    background-color: pink;
+    /* background-color: pink; */
 }
 
 .seg-member-container.alumni > section:nth-child(2){
     padding: 1rem;
-    background-color: #91f2cd;
+    /* background-color: #91f2cd; */
 }
 
 @media (orientation: landscape) {
@@ -94,3 +125,16 @@ section.slice{
     }
   }
   
+
+
+/* ----------- iPhone 6, 6S, 7 and 8 ----------- */
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    .detail{
+        display: none;
+    }
+}

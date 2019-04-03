@@ -1,7 +1,8 @@
-<h4>
-  Alumni
-</h4>
-<div class="members">
+<section class="minslice">
+  <h4>
+    Alumni
+  </h4>
+  <div class="members">
     <div *ngFor="let member of _alum" class="seg-member-container alumni">
       <section id="{{member.id}}" [style.background-image]="getPortrait(member.portrait)">
           <p>{{member.displayname}}</p>
@@ -12,3 +13,4 @@
       </section>
     </div>
   </div>
+</section>
