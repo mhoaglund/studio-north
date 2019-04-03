@@ -10,12 +10,22 @@ p, span, h5{
     font-family: 'Heebo', serif;
     line-height: 1.4;
 }
+h3{
+    font-size: 1.25rem;
+}
+h2{
+    font-size: 1.5rem;
+}
+h1{
+    font-size: 7rem;
+    margin:1rem;
+    color: white;
+}
 h1, h2, h3, h4{
     color: #222;
     font-family: 'Crimson Text', serif;
     font-weight: 100;
     letter-spacing: 0.5px;
-    font-size: 1.5rem;
 }
 
 section h4:first-child{
@@ -62,13 +72,22 @@ app-alumnilist > section{
     justify-content: center;
     align-items: center;
 }
+    .heroplate h1, .heroplate h2, .heroplate h3{
+        color: white;
+    }
+    .heroplate h1{
+        line-height: 0.9;
+    }
     .heroplate .herocontent{
         font-weight: 100;
         z-index: 999;
+        text-align: center;
+        max-width: 47vw;
     }
     .heroplate .herocontent h2{
         color: white;
         font-size: 3rem;
+        margin: 1rem;
     }
     .heroplate .herooverlay{
         position: absolute;
