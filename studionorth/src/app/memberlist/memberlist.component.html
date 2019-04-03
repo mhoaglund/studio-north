@@ -16,5 +16,17 @@
           <p class="detail">{{ (member.shortbio.length>180)? (member.shortbio | slice:0:180)+'..':(member.shortbio) }}</p>
       </section>
     </div>
+    <div *ngIf="_vacancies" class="seg-member-container member">
+        <section class="portrait-frame">
+            <section class="vacancy-portrait">
+            </section>
+        </section>
+        <section>
+            <p class="basic member-desc">Are you an artist?</p>
+            <hr>
+            <p class="detail">Get in touch! Studio North is always looking for interested artists. You could be our next member.</p>
+        </section>
+      </div>
+    
   </div>
 </section>

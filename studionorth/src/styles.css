@@ -51,6 +51,9 @@ app-alumnilist > section{
     background-color: #ececec;
 }
 
+.vacancy-portrait{
+    border: 1px dashed #5050c5;
+}
 .heroplate{
     background-position: center center;
     background-size: cover;
@@ -61,7 +64,22 @@ app-alumnilist > section{
 }
     .heroplate .herocontent{
         font-weight: 100;
+        z-index: 999;
+    }
+    .heroplate .herocontent h2{
         color: white;
+        font-size: 3rem;
+    }
+    .heroplate .herooverlay{
+        position: absolute;
+        top:0;
+        left:0;
+        background: #536976;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #292E49, #536976);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #292E49, #536976); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        height: 100%;
+        width: 100%;
+        opacity: 0.45;
     }
 /* Segmented Member Control */
 .seg-member-container{

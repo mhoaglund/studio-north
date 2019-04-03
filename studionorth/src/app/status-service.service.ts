@@ -8,7 +8,7 @@ import 'rxjs/Rx';
   providedIn: 'root'
 })
 export class StatusServiceService {
-  status: any
+  status: any = {}
   constructor(private http: HttpClient) {
     this.getJSON().subscribe(data => {
         console.log(data);
