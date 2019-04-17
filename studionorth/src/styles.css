@@ -64,32 +64,33 @@ app-alumnilist > section{
 .vacancy-portrait{
     border: 1px dashed #5050c5;
 }
-.heroplate{
+.plate{
     background-position: center center;
     background-size: cover;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
-    .heroplate h1, .heroplate h2, .heroplate h3{
+    .plate h1, .plate h2, .plate h3{
         color: white;
     }
-    .heroplate h1{
+    .plate h1{
         line-height: 0.9;
     }
-    .heroplate .herocontent{
+    .plate .herocontent{
         font-weight: 100;
         z-index: 999;
         text-align: center;
         max-width: 47vw;
     }
-    .heroplate .herocontent h2{
+    .plate .herocontent h2{
         color: white;
         font-size: 3rem;
         margin: 1rem;
     }
-    .heroplate .herooverlay{
+    .plate .herooverlay{
         position: absolute;
         top:0;
         left:0;
@@ -100,6 +101,46 @@ app-alumnilist > section{
         width: 100%;
         opacity: 0.45;
     }
+    .plate .fpoverlay{
+        position: absolute;
+        top:0;
+        left:0;
+        background: #536976;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #292E49, #536976);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #292E49, #536976); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        height: 100%;
+        width: 100%;
+        opacity: 0.45;
+    }
+    .plate .fpcontent{
+        width: 18vw;
+        height: 45vh;
+        background-color: white;
+        border: 2px solid #ececec;
+        z-index: 999;
+        display: grid;
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: repeat(1fr, 4);
+    }
+    @media (orientation: portrait) {
+        .plate .fpcontent{
+            width: 28vw;
+            height: 45vh;
+        }
+    }
+        .fpcontent .stall{
+            border: 1px solid #ececec;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            align-content: center;
+            align-items: center;
+            color: #888;
+        }
+        .fpcontent .stall:first-child{
+            border: 1px solid #ececec;
+            grid-column: 1 / span 2;
+        }
 /* Segmented Member Control */
 .seg-member-container{
     display: grid;
